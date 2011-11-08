@@ -1,0 +1,28 @@
+
+/*
+ * This file is part of the gameop package.
+ *
+ * (c) Dennis Dietrich <d.dietrich84@googlemail.com/>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+body                                    { background:#fbfbfb; font-size:12px; font-family:"Arial"; color:#555 }
+a, a:visited                            { text-decoration:none }
+a:hover                                 {}
+a:active                                {}
+
+h1, h2, h3, h4, h5, h6                  { font-family:"KlavikaBold" }
+h1                                      {}
+h2                                      { font-size:36px; font-family:"KlavikaLight"; color:#333; margin-bottom:10px }
+h3                                      {}
+
+p                                       { margin:10px 0 }
+
+ul                                      {}
+ul li                                   {}
+ul li a                                 {}
+ul li ul                                {}
+ul li ul li                             {}
+ul li ul li a                           {}

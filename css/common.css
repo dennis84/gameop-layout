@@ -1,0 +1,22 @@
+
+/*
+ * This file is part of the gameop package.
+ *
+ * (c) Dennis Dietrich <d.dietrich84@googlemail.com/>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+.left                                   { float:left }
+.right                                  { float:right }
+.container                              { overflow:hidden }
+
+.clear                                  { clear:both }
+
+.hr                                     { height:1px; background:#b7b4a4; -moz-box-shadow:0 1px 0 #fff }
+
+.inverted                               {}
+
+.icon                                   { background:url(../img/spr-icons-16.png) no-repeat; width:16px; height:16px; display:inline-block; }
+

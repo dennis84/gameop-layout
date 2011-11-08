@@ -1,0 +1,18 @@
+
+.wrapper                                { width:940px; margin:0 auto }
+
+ul.cols-160                             { overflow:hidden }
+ul.cols-160 li                          { float:left; width:160px; margin-right:20px }
+ul.cols-160 li.last                     { margin-right:0 }
+
+ul.cols-220                             { overflow:hidden }
+ul.cols-220 li                          { float:left; width:220px; margin-right:20px }
+ul.cols-220 li.last                     { margin-right:0 }
+
+ul.cols-460                             { overflow:hidden }
+ul.cols-460 li                          { float:left; width:460px; margin-right:20px }
+ul.cols-460 li.last                     { margin-right:0 }
+
+ul.cols-580-340                         { overflow:hidden }
+ul.cols-580-340 li                      { float:left; width:580px; margin-right:20px }
+ul.cols-580-340 li.last                 { width:340px; margin-right:0 }
