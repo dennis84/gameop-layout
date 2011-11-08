@@ -15,7 +15,7 @@ a:active                                {}
 
 h1, h2, h3, h4, h5, h6                  { font-family:"KlavikaBold" }
 h1                                      {}
-h2                                      { font-size:36px; font-family:"KlavikaLight"; color:#333; margin-bottom:10px }
+h2                                      { font-size:24px; font-family:"KlavikaLight"; color:#333; margin-bottom:10px }
 h3                                      {}
 
 p                                       { margin:10px 0 }

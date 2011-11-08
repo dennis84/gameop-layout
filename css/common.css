@@ -22,3 +22,30 @@
 
 .flag                                   { background:url(../img/flags.png) no-repeat; position:absolute }
 .flag.new-small-top-right               { background-position: 0 0; width:25px; height:25px; top:-2px; right:-2px }
+
+.button.primary {
+    display:inline-block;
+    cursor:pointer;
+    color:#fff;
+    line-height:28px;
+    padding:0 10px;
+    background:#4c8ffd;
+    background:linear-gradient(top,#4c8ffd,#4787ed);
+    border-radius:2px;
+    text-decoration:none;
+    text-shadow:0 -1px 0 #2e65bd;
+    font-weight:bold;
+}
+
+.button.secondary {
+    display:inline-block;
+    cursor:pointer;
+    color:#555;
+    line-height:28px;
+    padding:0 10px;
+    border:1px solid #ddd;
+    background:#f3f3f3;
+    background:linear-gradient(top,#f5f5f5,#f1f1f1);
+    border-radius:2px;
+    text-decoration:none;
+}
