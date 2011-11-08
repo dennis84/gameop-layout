@@ -20,3 +20,5 @@
 
 .icon                                   { background:url(../img/spr-icons-16.png) no-repeat; width:16px; height:16px; display:inline-block; }
 
+.flag                                   { background:url(../img/flags.png) no-repeat; position:absolute }
+.flag.new-small-top-right               { background-position: 0 0; width:25px; height:25px; top:-2px; right:-2px }

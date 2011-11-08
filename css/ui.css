@@ -15,13 +15,22 @@
     border-radius:3px;
 }
 
+.button-bar:hover {
+    box-shadow:0 1px 3px #eee;
+}
+
 .button-bar a {
+    margin:0;
     display:inline-block;
     line-height:24px;
     color:#555;
     text-shadow:0 1px 0 #fff;
     border-right:1px solid #ccc;
     padding:0 5px;
+}
+
+.button-bar a:hover {
+    background:#fefefe;
 }
 
 .button-bar a:last-child {
