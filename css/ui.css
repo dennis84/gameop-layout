@@ -1,5 +1,10 @@
 
-/*
+/*    ______                      ____  ____
+ *   / ____/____ _____ ___  ___  / __ \/ __ \
+ *  / / __ / __ `/ __ `__ \/ _ \/ / / / /_/ /
+ * / /_/ // /_/ / / / / / /  __/ /_/ / ____/
+ * \____/ \__,_/_/ /_/ /_/\___/\____/_/
+ *
  * This file is part of the gameop package.
  *
  * (c) Dennis Dietrich <d.dietrich84@googlemail.com/>
@@ -8,48 +13,18 @@
  * file that was distributed with this source code.
  */
 
-.button-bar {
-    background:#f5f5f5;
-    background:linear-gradient(top, #f5f5f5, #f1f1f1);
-    border:1px solid #ccc;
-    border-radius:2px;
-}
 
-.button-bar:hover {
-    box-shadow:0 1px 3px #eee;
-}
-
-.button-bar a {
-    font-size:10px;
-    margin:0;
-    display:inline-block;
-    line-height:24px;
-    color:#555;
-    text-shadow:0 1px 0 #fff;
-    border-right:1px solid #ccc;
-    padding:0 2px;
-}
-
-.button-bar a:hover {
-    background:#fefefe;
-}
-
-.button-bar a:last-child {
-    border-right:0;
-}
-
-
+/* =============================================================================
+   Main Menu
+   ========================================================================== */
 
 .menu-main {
-    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f5f5), color-stop(100%,#f1f1f1));
-    background:linear-gradient(top, #f5f5f5 0%,#f1f1f1 100%);
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#fbfbfb), color-stop(100%,#f7f7f7));
+    background:linear-gradient(top, #fbfbfb 0%,#f7f7f7 100%);
     overflow:hidden;
-    border-radius:3px;
-    border:1px solid #d3d3d3;
-    box-shadow:inset 0 1px 0 #fff, 0 1px 3px #eee;
+    border-radius:2px;
+    box-shadow:inset 0 1px 0 #fff, 0 1px 3px #ddd;
 }
-
-
 
 .menu-main ul {}
 
@@ -59,12 +34,111 @@
 }
 
 .menu-main ul li a {
-    border-right:1px solid #d3d3d3;
+    text-transform:uppercase;
     display:block;
     text-align:center;
     line-height:40px;
     color:#666;
-    font-size:14px;
+    font-size:12px;
     font-family:"KlavikaBold";
     text-shadow:0 1px 0 #fff;
+}
+
+
+/* =============================================================================
+   Submenu
+   ========================================================================== */
+
+.submenu {
+    margin-top:10px;
+    overflow:hidden;
+}
+
+.submenu .actions {
+    float:right;
+}
+
+.submenu .button-bar {
+    float:left;
+}
+
+/* =============================================================================
+   Button Bar
+   ========================================================================== */
+
+.button-bar {}
+
+.button-bar ul {
+    background:#f5f5f5;
+    background:linear-gradient(top, #f5f5f5, #f1f1f1);
+    border:1px solid #ccc;
+    border-radius:2px;
+    overflow:hidden;
+    display:inline-block;
+}
+
+.button-bar ul:hover {
+    box-shadow:0 1px 3px #eee;
+}
+
+.button-bar ul li {
+    float:left;
+    border-right:1px solid #ccc;
+}
+
+.button-bar ul li:last-child {
+    border-right:0;
+}
+
+.button-bar ul li a {
+    font-size:11px;
+    font-weight:bold;
+    margin:0;
+    display:inline-block;
+    line-height:24px;
+    color:#666;
+    text-shadow:0 1px 0 #fff;
+    padding:0 4px;
+}
+
+.button-bar ul li a:hover {
+    background:#fefefe;
+}
+
+
+/* =============================================================================
+   Buttons
+   ========================================================================== */
+
+.button {
+    display:inline-block;
+    cursor:pointer;
+    border-radius:2px;
+    line-height:28px;
+    padding:0 10px;
+    text-decoration:none;
+}
+
+.button.blue {
+    color:#fff;
+    background:#4c8ffd;
+    background:linear-gradient(top,#4c8ffd,#4787ed);
+    text-shadow:0 -1px 0 #2e65bd;
+    font-weight:bold;
+}
+
+.button.light {
+    color:#555;
+    border:1px solid #ddd;
+    background:#f3f3f3;
+    text-shadow:0 1px 0 #fff;
+    background:linear-gradient(top,#f5f5f5,#f1f1f1);
+}
+
+.button.dark {
+    color:#fff;
+    background:#555;
+    text-shadow:0 -1px 0 #000;
+    font-weight:bold;
+    background:linear-gradient(top,#f5f5f5,#f1f1f1);
 }
