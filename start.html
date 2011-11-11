@@ -1,11 +1,5 @@
 <!DOCTYPE html>
 <!--
-    ______                      ____  ____
-   / ____/____ _____ ___  ___  / __ \/ __ \
-  / / __ / __ `/ __ `__ \/ _ \/ / / / /_/ /
- / /_/ // /_/ / / / / / /  __/ /_/ / ____/
- \____/ \__,_/_/ /_/ /_/\___/\____/_/
-
  This file is part of the gameop package.
 
  (c) Dennis Dietrich <d.dietrich84@googlemail.com/>
@@ -25,10 +19,12 @@
         <link rel="stylesheet" media="all" href="css/varoious.css" />
         <link rel="stylesheet" media="all" href="css/widgets.css" />
         <link rel="stylesheet" media="all" href="css/ui.css" />
+        <link rel="stylesheet" media="all" href="css/form.css" />
 
         <script src="vendor/jquery/jquery.js"></script>
         <script src="vendor/jquery/jquery-ui.js"></script>
         <script src="vendor/grid/gridlayout.js"></script>
+        <script src="js/form-fields.js"></script>
     </head>
 
     <body>
@@ -89,8 +85,63 @@
                 </div>
 
                 <div class="column-content">
-                    <div class="server-offer-compare">
+                    <div class="server-offer-compare-widget">
                         <h2>Server suchen</h2>
+                        <div class="content">
+                            <div class="server-offer-compare">
+                                <form action="#"  method="post">
+                                    <div id="server_offer">
+                                        <div class="form-row form-text-row">
+                                            <label for="title" class="required">Title</label>
+                                            <input type="text" id="title" name="title" required="required" value="" />
+                                        </div>
+
+                                        <div class="form-row form-expanded-choice-row">
+                                            <label>Purpose</label>
+                                            <span class="form-field-value" id="purpose-preview">Select</span>
+                                            <div id="purpose">
+                                                <ul>
+                                                    <li class="checked">
+                                                        <input type="radio" value="public" name="purpose" id="purpose_game">
+                                                        <label for="purpose_game">gameop.public_server</label>
+                                                        <span class="icon radio">&nbsp;</span>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" value="clan" name="purpose" id="purpose_clan">
+                                                        <label for="purpose_clan">gameop.clan_server</label>
+                                                        <span class="icon radio">&nbsp;</span>
+                                                    </li>
+                                                </ul>
+                                                <div class="footer">
+                                                    <div class="footer-action">
+                                                        <a href="#" class="button light">Abbrechen</a>
+                                                        <a href="#" class="button blue">Übernehmen</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row form-choice-row">
+                                            <label for="type" class="required">Usecase</label>
+                                            <select id="type" name="type" required="required">
+                                                <option value="public">gameop.public_server</option>
+                                                <option value="clan">gameop.clan_server</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-row form-expanded-multiple-choice-row">
+                                            <label class="required">Games</label>
+                                            <div id="games">
+                                                <input type="checkbox" id="game_1" name="game_1" value="1" />
+                                                <label for="game_1">CS</label>
+                                                <input type="checkbox" id="game_2" name="game_2" value="2" />
+                                                <label for="game_2">COD</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

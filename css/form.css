@@ -1,0 +1,38 @@
+
+/*
+ * This file is part of the gameop package.
+ *
+ * (c) Dennis Dietrich <d.dietrich84@googlemail.com/>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+.form-row                                           {}
+.form-row > label                                   { line-height:24px; font-weight:bold; color:#555; display:inline-block }
+.form-row > input                                   { line-height:24px; border:1px solid #d3d3d3; border-radius:2px }
+.form-row > select                                  { border:1px solid #d3d3d3; border-radius:2px }
+.form-row > textarea                                { border:1px solid #d3d3d3; border-radius:2px }
+.form-row > div                                     {}
+
+.form-text-row                                      {}
+
+.form-choice-row                                    {}
+
+.form-multiple-choice-row                           {}
+
+.form-expanded-choice-row                           { position:relative }
+.form-expanded-choice-row label                     {}
+.form-expanded-choice-row > div                     { display:none; position:absolute; background:#fff; box-shadow:0 1px 5px #ccc }
+.form-expanded-choice-row > div ul                  {}
+.form-expanded-choice-row > div ul li               { padding:0 10px; line-height:32px }
+.form-expanded-choice-row > div ul li:hover         { background:#f2f2f2 }
+.form-expanded-choice-row > div input               { opacity:0; position:absolute }
+.form-expanded-choice-row > div .footer             { padding:10px 10px; overflow:hidden }
+.form-expanded-choice-row > div .footer-action      { float:right }
+.form-expanded-choice-row > div li .icon            { background-position:-16px 0; float:right; margin-top:7px }
+.form-expanded-choice-row > div li.checked .icon    { background-position:0 0 }
+
+.form-expanded-multiple-choice-row                  {}
+
+.form-field-value                                   { display:inline-block; background:#eee; padding:4px; width:100px; border:1px solid #ccc }

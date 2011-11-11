@@ -1,10 +1,5 @@
 
-/*    ______                      ____  ____
- *   / ____/____ _____ ___  ___  / __ \/ __ \
- *  / / __ / __ `/ __ `__ \/ _ \/ / / / /_/ /
- * / /_/ // /_/ / / / / / /  __/ /_/ / ____/
- * \____/ \__,_/_/ /_/ /_/\___/\____/_/
- *
+/*
  * This file is part of the gameop package.
  *
  * (c) Dennis Dietrich <d.dietrich84@googlemail.com/>
@@ -42,3 +37,12 @@
 .review-widget                          { margin-bottom:40px }
 .review-widget .content                 { margin-top:20px }
 .review-widget .button                  { line-height:24px }
+
+/* =============================================================================
+   Server Offer Compare Widget
+   ========================================================================== */
+
+.server-offer-compare-widget                                    {}
+.server-offer-compare-widget .content                           { margin-top:20px }
+.server-offer-compare-widget .form-row > label                  { width:240px }
+.server-offer-compare-widget .form-expanded-choice-row > div    { top:28px; left:240px }

@@ -1,10 +1,5 @@
 
-/*    ______                      ____  ____
- *   / ____/____ _____ ___  ___  / __ \/ __ \
- *  / / __ / __ `/ __ `__ \/ _ \/ / / / /_/ /
- * / /_/ // /_/ / / / / / /  __/ /_/ / ____/
- * \____/ \__,_/_/ /_/ /_/\___/\____/_/
- *
+/*
  * This file is part of the gameop package.
  *
  * (c) Dennis Dietrich <d.dietrich84@googlemail.com/>
@@ -23,7 +18,11 @@
 
 .inverted                               {}
 
-.icon                                   { background:url(../img/spr-icons-16.png) no-repeat; width:16px; height:16px; display:inline-block; }
+.icon                                   { background:url(../img/icons-16.png) no-repeat; width:16px; height:16px; display:inline-block; }
+.icon.radio                             { background-position:0 0 }
+.icon.radio-checked                     { background-position:-16px 0 }
+.icon.checkbox                          { background-position:-32px 0 }
+.icon.checkbox-checked                  { background-position:-48px 0 }
 
 .flag                                   { background:url(../img/flags.png) no-repeat; position:absolute }
 .flag.new-small-top-right               { background-position: 0 0; width:25px; height:25px; top:-2px; right:-2px }
