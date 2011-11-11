@@ -98,7 +98,7 @@
 
                                         <div class="form-row form-expanded-choice-row">
                                             <label>Purpose</label>
-                                            <span class="form-field-value" id="purpose-preview">Select</span>
+                                            <span class="form-dropdown-field">Select</span>
                                             <div id="purpose">
                                                 <ul>
                                                     <li class="checked">
@@ -130,12 +130,27 @@
                                         </div>
 
                                         <div class="form-row form-expanded-multiple-choice-row">
-                                            <label class="required">Games</label>
+                                            <label>Games</label>
+                                            <span class="form-dropdown-field">Select</span>
                                             <div id="games">
-                                                <input type="checkbox" id="game_1" name="game_1" value="1" />
-                                                <label for="game_1">CS</label>
-                                                <input type="checkbox" id="game_2" name="game_2" value="2" />
-                                                <label for="game_2">COD</label>
+                                                <ul>
+                                                    <li class="checked">
+                                                        <input type="checkbox" value="1" name="games_1" id="games_1">
+                                                        <label for="games_1">Counter Strike</label>
+                                                        <span class="icon checkbox">&nbsp;</span>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" value="2" name="games_2" id="games_2">
+                                                        <label for="games_2">Call of Duty</label>
+                                                        <span class="icon checkbox">&nbsp;</span>
+                                                    </li>
+                                                </ul>
+                                                <div class="footer">
+                                                    <div class="footer-action">
+                                                        <a href="#" class="button light">Abbrechen</a>
+                                                        <a href="#" class="button blue">Übernehmen</a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
