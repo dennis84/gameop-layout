@@ -10,6 +10,12 @@
 
 $(function () {
     /**
+     * Appends the form overlay at the bottom
+     * of the body.
+     */
+    $('body').append('<div id="form-overlay" style="display:none"></div>');
+
+    /**
      * The exanded choice box action.
      * That are choice types with expanded attribute. The form
      * inpputs are radio buttons.
@@ -19,19 +25,24 @@ $(function () {
             target   = row.find('> div'),
             dropdown = row.find('.form-dropdown-field');
 
-        $(document).bind('formDropdown.toggle', function () {
+        // On toggle dropdown. The overlay events gets started
+        // and must closed.
+        $(document).on('expandedChoice.toggle', function () {
             if (target.is(':visible')) {
-                $('#form-overlay').remove();
+                $('#form-overlay').hide().off('click');
                 target.hide();
             } else {
-                $('body').append('<div id="form-overlay"></div>');
+                $('#form-overlay').show().on('click', function () {
+                    $(document).trigger('expandedChoice.toggle');
+                });
+
                 target.show();
             }
         });
 
         // Toggles the dropdown field.
-        dropdown.bind('click', function () {
-            $(document).trigger('formDropdown.toggle');
+        dropdown.on('click', function () {
+            $(document).trigger('expandedChoice.toggle');
         });
 
         // Handles the change input event. Removes all
@@ -42,18 +53,13 @@ $(function () {
             $(this).closest('li').addClass('checked');
             dropdown.text($(this).next('label').text());
 
-            $(document).trigger('formDropdown.toggle');
+            $(document).trigger('expandedChoice.toggle');
         });
 
         // The footer action. Closes on each button.
         target.on('click', '.footer-action a', function () {
-            $(document).trigger('formDropdown.toggle');
+            $(document).trigger('expandedChoice.toggle');
             return false;
-        });
-
-        // Closes the form dropdown on click on overlay.
-        $('#form-overlay').live('click', function () {
-            $(document).trigger('formDropdown.toggle');
         });
     });
 
@@ -71,7 +77,7 @@ $(function () {
         // Pushs the current items into the checkedItems
         // array to restore the current state. The collection
         // must be resetted on each call.
-        $(document).bind('formDropdown.show', function () {
+        $(document).on('expandedMultipleChoice.show', function () {
             checkedItems = [];
 
             $(target).find('input').each(function () {
@@ -80,12 +86,17 @@ $(function () {
                 }
             });
 
-            $('body').append('<div id="form-overlay"></div>');
+            $('#form-overlay').show().on('click', function () {
+                $(document).trigger('expandedMultipleChoice.cancel');
+                $(document).trigger('expandedMultipleChoice.close');
+            });
 
             target.show();
         });
 
-        $(document).bind('formDropdown.cancel', function () {
+        // Cancels the selection. Restores the
+        // html checked attributes.
+        $(document).on('expandedMultipleChoice.cancel', function () {
             $(target).find('input').each(function () {
                 if ($.inArray(this.id, checkedItems) >= 0) {
                     this.checked = 'checked';
@@ -97,15 +108,18 @@ $(function () {
             });
         });
 
-        $(document).bind('formDropdown.close', function () {
-            $('#form-overlay').remove();
+        // Closes the dropdown. The overlay event must stopped.
+        // otherwise another event on the same element can be
+        // triggered.
+        $(document).on('expandedMultipleChoice.close', function () {
+            $('#form-overlay').hide().off('click');
             target.hide();
         });
 
         // Shows the dropdown field and register
         // the ids of current choices
-        dropdown.bind('click', function () {
-            $(document).trigger('formDropdown.show');
+        dropdown.on('click', function () {
+            $(document).trigger('expandedMultipleChoice.show');
         });
 
         // Adds a class to the closest li item of checked element.
@@ -125,23 +139,16 @@ $(function () {
         // status to the default state before the dropdown
         // was opened.
         target.on('click', '.footer-action .cancel', function () {
-            $(document).trigger('formDropdown.cancel');
-            $(document).trigger('formDropdown.close');
+            $(document).trigger('expandedMultipleChoice.cancel');
+            $(document).trigger('expandedMultipleChoice.close');
             return false;
         });
 
         // find all checked items and push them into
         // the result container.
         target.on('click', '.footer-action .apply', function () {
-            $(document).trigger('formDropdown.close');
+            $(document).trigger('expandedMultipleChoice.close');
             return false;
-        });
-
-        // Closes the form dropdown on click on overlay and
-        // cancels the choices
-        $('#form-overlay').live('click', function () {
-            $(document).trigger('formDropdown.cancel');
-            $(document).trigger('formDropdown.close');
         });
     });
 });
