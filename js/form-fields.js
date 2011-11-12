@@ -29,9 +29,7 @@ $(function () {
             $(this).closest('li').addClass('checked');
             dropdown.text($(this).next('label').text());
 
-            var t = setTimeout(function () {
-                target.hide();
-            }, 100);
+            target.hide();
         });
 
         target.find('.footer-action a').bind('click', function () {
@@ -51,35 +49,38 @@ $(function () {
             output           = row.find('.form-dropdown-selection'),
             dropdown         = row.find('.form-dropdown-field'),
             dropdownItemHtml = '<span class="form-dropdown-item"></span>',
-            checked          = [];
+            checkedItems     = [];
 
-        // register the current choices
+        // Shows the dropdown field and register
+        // the ids of current choices
         dropdown.bind('click', function () {
             $(target).find('input').each(function () {
-                if ($(this).is(':checked')) {
-                    checked.push($(this));
+                if (this.checked) {
+                    checkedItems.push(this.id);
                 }
             });
 
             target.show();
         });
 
-        // shows the dropdown field
+        // Adds a class to the closest li item of
+        // checked element.
         target.find('input').change(function (event) {
             $(this).closest('li').toggleClass('checked');
         });
 
-        // traverses all items and disable them then traverses
-        // the checked items and enable them again.
+        // Traverses all items and resets the checked
+        // status to the default state before the dropdown
+        // was opened.
         target.find('.footer-action .cancel').bind('click', function () {
             $(target).find('input').each(function () {
-                $(this).attr('checked', '');
-                $(this).closest('li').removeClass('checked');
-            });
-
-            $.each(checked, function (i, el) {
-                $(el).attr('checked', 'checked');
-                $(this).closest('li').addClass('checked');
+                if ($.inArray(this.id, checkedItems) >= 0) {
+                    $(this).checked;
+                    $(this).closest('li').addClass('checked');
+                } else {
+                    $(this).removeProp('checked');
+                    $(this).closest('li').removeClass('checked');
+                }
             });
 
             target.hide();
@@ -92,7 +93,7 @@ $(function () {
         target.find('.footer-action .apply').bind('click', function () {
             output.html('');
             $(target).find('input').each(function () {
-                if ($(this).is(':checked')) {
+                if (this.checked) {
                     var dropdownItem = $(dropdownItemHtml)
                         .html($(this).next('label').text())
                         .appendTo(output);

@@ -42,8 +42,9 @@
    Server Offer Compare Widget
    ========================================================================== */
 
-.server-offer-compare-widget                                    {}
-.server-offer-compare-widget .content                           { margin-top:20px }
-.server-offer-compare-widget .form-row > label                  { width:240px }
-.server-offer-compare-widget .form-expanded-choice-row > div    { top:28px; left:240px }
-.server-offer-compare-widget .form-expanded-multiple-choice-row > div    { top:28px; left:240px }
+.server-offer-compare-widget                                            {}
+.server-offer-compare-widget .content                                   { margin-top:20px }
+.server-offer-compare-widget .form-row > label                          { width:240px }
+.server-offer-compare-widget .form-expanded-choice-row > div            { top:28px; left:240px }
+.server-offer-compare-widget .form-expanded-multiple-choice-row > div   { top:28px; left:240px }
+.server-offer-compare-widget .form-dropdown-selection                   { margin-left:240px }
