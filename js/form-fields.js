@@ -63,12 +63,17 @@ $(function () {
      * The form inputs are checkboxes.
      */
     $('.form-expanded-multiple-choice-row').each(function () {
-        var row              = $(this),
-            target           = row.find('> div'),
-            dropdown         = row.find('.form-dropdown-field'),
-            checkedItems     = [];
+        var row          = $(this),
+            target       = row.find('> div'),
+            dropdown     = row.find('.form-dropdown-field'),
+            checkedItems = [];
 
+        // Pushs the current items into the checkedItems
+        // array to restore the current state. The collection
+        // must be resetted on each call.
         $(document).bind('formDropdown.show', function () {
+            checkedItems = [];
+
             $(target).find('input').each(function () {
                 if (this.checked) {
                     checkedItems.push(this.id);
@@ -76,16 +81,17 @@ $(function () {
             });
 
             $('body').append('<div id="form-overlay"></div>');
+
             target.show();
         });
 
         $(document).bind('formDropdown.cancel', function () {
             $(target).find('input').each(function () {
                 if ($.inArray(this.id, checkedItems) >= 0) {
-                    $(this).checked;
+                    this.checked = 'checked';
                     $(this).closest('li').addClass('checked');
                 } else {
-                    $(this).removeProp('checked');
+                    $(this).removeAttr('checked');
                     $(this).closest('li').removeClass('checked');
                 }
             });
@@ -102,9 +108,16 @@ $(function () {
             $(document).trigger('formDropdown.show');
         });
 
-        // Adds a class to the closest li item of
-        // checked element.
-        target.on('change', 'input', function (event) {
+        // Adds a class to the closest li item of checked element.
+        // Its confusing if el is not checked then the attribute will
+        // added, but on change the attributes changed before.
+        target.on('change', 'input', function () {
+            if (!this.checked) {
+                $(this).removeAttr('checked');
+            } else {
+                this.checked = 'checked';
+            }
+
             $(this).closest('li').toggleClass('checked');
         });
 
