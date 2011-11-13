@@ -1,0 +1,121 @@
+
+/*
+ * This file is part of the gameop package.
+ *
+ * (c) Dennis Dietrich <d.dietrich84@googlemail.com/>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+/* =============================================================================
+   Generic
+   ========================================================================== */
+
+.chzn-container                                     { position:relative; display:inline-block }
+.chzn-container-multi                               {}
+.chzn-container-active                              {}
+
+.chzn-choices                                       { overflow:hidden; cursor:text }
+.chzn-choices li                                    { float:left }
+.chzn-choices .search-choice                        {}
+.chzn-choices .search-choice .search-choice-close   {}
+
+.chzn-choices .search-field                         {}
+.chzn-choices .search-field input                   { border:0; outline:none }
+
+.chzn-drop                                          { position:absolute }
+.chzn-drop .chzn-results                            {}
+.chzn-drop .chzn-results li                         {}
+.chzn-drop .chzn-results .result-selected           {}
+.chzn-drop .chzn-results .active-result             {}
+.chzn-drop .chzn-results .highlighted               {}
+
+
+/* =============================================================================
+   Colors etc.
+   ========================================================================== */
+
+.chzn-choices {
+    background:#fff;
+    padding:2px 2px;
+    border:1px solid #d3d3d3;
+    border-radius:2px;
+}
+
+.chzn-choices .search-choice {
+    line-height:20px;
+    padding:0 2px;
+    margin:2px;
+    background:#f3f3f3;
+    background:linear-gradient(top,#f5f5f5,#f1f1f1);
+    background:-webkit-linear-gradient(top,#f5f5f5,#f1f1f1);
+    box-shadow:0 1px 3px #ccc;
+    border-radius:20px;
+}
+
+.chzn-choices .search-choice .search-choice-close {
+    width:16px;
+    height:16px;
+    background:#000;
+    display:inline-block;
+    float:right;
+}
+
+.chzn-drop {
+    background:#fff;
+    box-shadow:0 1px 5px #ddd;
+}
+
+.chzn-drop .chzn-results li {
+    line-height:28px;
+    padding:0 10px;
+}
+
+.chzn-drop .chzn-results li:hover {
+    background:#eee;
+}
+
+.chzn-drop .chzn-results .highlighted {
+    background:#eee;
+}
+
+/**
+
+A html example:
+
+<div class="form-row form-multiple-choice-row">
+    <label>Games</label>
+    <select data-placeholder="Choose a Game..." multiple="multiple" id="selC7J" style="display: none; " class="chzn-done">
+        <option value=""></option>
+        <option value="United States" selected="selected">Counter Strike</option> 
+        <option value="United Kingdom">Call of Duty</option> 
+        <option value="Afghanistan">Battlefield</option> 
+        <option value="Albania">FIFA 2004</option>
+    </select>
+    
+    
+    <div id="selC7J_chzn" class="chzn-container chzn-container-multi chzn-container-active" style="width: 180px;">
+        <ul class="chzn-choices">
+            <li class="search-choice" id="selC7J_chzn_c_1">
+                <span>Counter Strike</span>
+                <a href="javascript:void(0)" class="search-choice-close" rel="1"></a>
+            </li>
+            
+            <li class="search-field">
+                <input type="text" value="Choose a Game..." class="" autocomplete="off" style="width: 25px; ">
+            </li>
+        </ul>
+        
+        <div class="chzn-drop" style="width: 178px; top: 19px; left: 0px; ">
+            <ul class="chzn-results">
+                <li id="selC7J_chzn_o_1" class="result-selected" style="">Counter Strike</li>
+                <li id="selC7J_chzn_o_2" class="active-result highlighted" style="">Call of Duty</li>
+                <li id="selC7J_chzn_o_3" class="active-result" style="">Battlefield</li>
+                <li id="selC7J_chzn_o_4" class="active-result" style="">FIFA 2004</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+*/

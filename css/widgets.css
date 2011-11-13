@@ -45,4 +45,4 @@
 .server-offer-compare-widget                                            {}
 .server-offer-compare-widget .content                                   { margin-top:20px }
 .server-offer-compare-widget .form-row > label                          { width:240px; float:left }
-.server-offer-compare-widget .form-row > div                            { left:240px }
+.server-offer-compare-widget .form-row > select                         { width:180px }

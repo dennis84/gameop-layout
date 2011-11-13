@@ -8,7 +8,6 @@
  * file that was distributed with this source code.
  */
 
-
 /* =============================================================================
    Generic
    ========================================================================== */
@@ -22,100 +21,8 @@
 
 
 /* =============================================================================
-   Text Row
+   Form Types
    ========================================================================== */
 
 .form-text-row                                      {}
 
-
-/* =============================================================================
-   Expanded Choice Row
-   ========================================================================== */
-
-.form-expanded-choice-row                           { position:relative }
-.form-expanded-choice-row > label                   {}
-.form-expanded-choice-row > div                     { display:none; position:absolute; z-index:999; background:#fff; box-shadow:0 1px 5px #ccc }
-.form-expanded-choice-row > div ul                  {}
-.form-expanded-choice-row > div ul li               { position:relative }
-.form-expanded-choice-row > div ul li:hover         { background:#f2f2f2 }
-.form-expanded-choice-row > div ul li .icon         { background-position:-16px 0; position:absolute; top:7px; right:7px }
-.form-expanded-choice-row > div ul li.checked .icon { background-position:0 0 }
-
-.form-expanded-choice-row > div label               { display:block; padding:0 10px; line-height:32px  }
-.form-expanded-choice-row > div input               { opacity:0; position:absolute }
-.form-expanded-choice-row > div .footer             { padding:10px 10px; overflow:hidden }
-.form-expanded-choice-row > div .footer-action      { float:right }
-
-.form-choicebox {
-    display:inline-block;
-    padding:6px 4px;
-    width:170px;
-    background:#f5f5f5;
-    background:linear-gradient(top, #f5f5f5, #f1f1f1);
-    border:1px solid #ccc;
-    border-radius:2px;
-    cursor:pointer;
-}
-
-.form-choicebox:hover {
-    box-shadow:0 1px 5px #ddd;
-}
-
-/* =============================================================================
-   Expanded Multiple Choice Row
-   ========================================================================== */
-
-.form-expanded-multiple-choice-row                           {}
-.form-expanded-multiple-choice-row                           { position:relative }
-.form-expanded-multiple-choice-row > label                   {}
-.form-expanded-multiple-choice-row > div                     { display:none; position:absolute; z-index:999; min-width:300px; background:#fff; box-shadow:0 1px 5px #ccc }
-.form-expanded-multiple-choice-row > div ul                  { overflow:hidden; overflow-y:scroll; height:200px }
-.form-expanded-multiple-choice-row > div ul li               { position:relative }
-.form-expanded-multiple-choice-row > div ul li:hover         { background:#f2f2f2 }
-.form-expanded-multiple-choice-row > div ul li .icon         { background-position:-48px 0; position:absolute; top:7px; right:7px }
-.form-expanded-multiple-choice-row > div ul li.checked .icon { background-position:-32px 0 }
-
-.form-expanded-multiple-choice-row > div label               { display:block; padding:0 10px; line-height:32px  }
-.form-expanded-multiple-choice-row > div input               { opacity:0; position:absolute }
-.form-expanded-multiple-choice-row > div .footer             { padding:10px 10px; overflow:hidden }
-.form-expanded-multiple-choice-row > div .footer-action      { float:right }
-
-.form-multiple-choicebox {
-    display:inline-block;
-    padding:6px 4px;
-    width:170px;
-    background:#fff;
-    border:1px solid #ccc;
-    border-radius:2px;
-}
-
-.form-multiple-choicebox:hover {
-    box-shadow:inset 0 1px 5px #ddd;
-}
-
-.form-multiple-choicebox span {
-    display:inline-block;
-    margin:2px;
-    padding:4px;
-    color:#fff;
-    background:#4c8ffd;
-    background:linear-gradient(top,#4c8ffd,#4787ed);
-    background:-webkit-linear-gradient(top,#4c8ffd,#4787ed);
-    text-shadow:0 -1px 0 #2e65bd;
-    border-radius:20px;
-}
-
-
-/* =============================================================================
-   Form Extras
-   ========================================================================== */
-
-#form-overlay {
-    background:#fff;
-    opacity:0.3;
-    width:100%;
-    height:100%;
-    position:absolute;
-    top:0;
-    left:0;
-}
