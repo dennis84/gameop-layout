@@ -18,12 +18,17 @@ $(function () {
     /**
      * The exanded choice box action.
      * That are choice types with expanded attribute. The form
-     * inpputs are radio buttons.
+     * inputs are radio buttons.
      */
     $('.form-expanded-choice-row').each(function () {
         var row      = $(this),
             target   = row.find('> div'),
-            dropdown = row.find('.form-dropdown-field');
+            dropdown = row.find('.form-choicebox');
+
+        // Fills the choicebox field on load.
+        target.find('input').each(function () {
+            dropdown.text($(this).next('label').text());
+        });
 
         // On toggle dropdown. The overlay events gets started
         // and must closed.
@@ -71,7 +76,7 @@ $(function () {
     $('.form-expanded-multiple-choice-row').each(function () {
         var row          = $(this),
             target       = row.find('> div'),
-            dropdown     = row.find('.form-dropdown-field'),
+            dropdown     = row.find('.form-multiple-choicebox'),
             checkedItems = [];
 
         // Pushs the current items into the checkedItems
@@ -93,6 +98,20 @@ $(function () {
 
             target.show();
         });
+
+        // Apllies the current selection. Appends the options
+        // to the dropdown field.
+        $(document).on('expandedMultipleChoice.apply', function () {
+            dropdown.html('');
+            $(target).find('input:checked').each(function () {
+                var label = $(this).next('label').text();
+                dropdown.append('<span>' + label + '</span>')
+            });
+        });
+
+        // Fills the current selection on loads.
+        // We can simply fire the apply trigger.
+        $(document).trigger('expandedMultipleChoice.apply');
 
         // Cancels the selection. Restores the
         // html checked attributes.
@@ -147,6 +166,7 @@ $(function () {
         // find all checked items and push them into
         // the result container.
         target.on('click', '.footer-action .apply', function () {
+            $(document).trigger('expandedMultipleChoice.apply');
             $(document).trigger('expandedMultipleChoice.close');
             return false;
         });
