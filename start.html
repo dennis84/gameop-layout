@@ -93,14 +93,23 @@
                                             <label for="title" class="required">Title</label>
                                             <input type="text" id="title" name="title" required="required" value="" />
                                         </div>
+
+                                        <div class="form-row form-text-row">
+                                            <label for="title">Title</label>
+                                            <select data-placeholder="Choose a Type..">
+                                                <option value="game">Game Server</option> 
+                                                <option value="clan">Clan Server</option> 
+                                            </select>
+                                        </div>
+
                                         <div class="form-row form-multiple-choice-row">
                                             <label>Games</label>
                                             <select data-placeholder="Choose a Game..." multiple="multiple">
                                                 <option value=""></option>
-                                                <option value="United States" selected="selected">Counter Strike</option> 
-                                                <option value="United Kingdom">Call of Duty</option> 
-                                                <option value="Afghanistan">Battlefield</option> 
-                                                <option value="Albania">FIFA 2004</option>
+                                                <option value="cs" selected="selected">Counter Strike</option> 
+                                                <option value="cod">Call of Duty</option> 
+                                                <option value="bf">Battlefield</option> 
+                                                <option value="fifa">FIFA 2004</option>
                                             </select>
                                         </div>
                                     </div>
