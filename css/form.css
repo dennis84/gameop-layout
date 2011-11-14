@@ -13,9 +13,10 @@
    ========================================================================== */
 
 .form-row                                           { margin-bottom:10px }
+.form-row *                                         { color:#555; font-size:12px }
 .form-row > label                                   { line-height:28px; font-weight:bold; color:#555; display:inline-block }
 .form-row > input                                   { padding:6px 4px; border:1px solid #d3d3d3; border-radius:2px }
-.form-row > select                                  { border:1px solid #d3d3d3; border-radius:2px }
+.form-row > select                                  {}
 .form-row > textarea                                { border:1px solid #d3d3d3; border-radius:2px }
 .form-row > div                                     {}
 
@@ -25,4 +26,3 @@
    ========================================================================== */
 
 .form-text-row                                      {}
-

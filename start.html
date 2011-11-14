@@ -20,6 +20,7 @@
         <link rel="stylesheet" media="all" href="css/varoious.css" />
         <link rel="stylesheet" media="all" href="css/widgets.css" />
         <link rel="stylesheet" media="all" href="css/ui.css" />
+        <link rel="stylesheet" media="all" href="css/jquery-ui.css" />
         <link rel="stylesheet" media="all" href="css/form.css" />
 
         <link rel="stylesheet" href="css/chosen.css" />
@@ -90,28 +91,50 @@
                                 <form action="#" method="post">
                                     <div id="server_offer">
                                         <div class="form-row form-text-row">
-                                            <label for="title" class="required">Title</label>
-                                            <input type="text" id="title" name="title" required="required" value="" />
-                                        </div>
-
-                                        <div class="form-row form-text-row">
-                                            <label for="title">Title</label>
-                                            <select data-placeholder="Choose a Type..">
-                                                <option value="game">Game Server</option> 
-                                                <option value="clan">Clan Server</option> 
+                                            <label for="title">Wählen Sie ein Server Typ</label>
+                                            <select data-placeholder="Wählen Sie ein Server Typ" multiple="multiple">
+                                                <option value="game">Game Server</option>
+                                                <option value="clan">Clan Server</option>
                                             </select>
                                         </div>
 
                                         <div class="form-row form-multiple-choice-row">
-                                            <label>Games</label>
-                                            <select data-placeholder="Choose a Game..." multiple="multiple">
-                                                <option value=""></option>
-                                                <option value="cs" selected="selected">Counter Strike</option> 
-                                                <option value="cod">Call of Duty</option> 
-                                                <option value="bf">Battlefield</option> 
+                                            <label>Wählen Sie ein Spiel</label>
+                                            <select data-placeholder="Wählen Sie ein Spiel" multiple="multiple">
+                                                <option value="cs">Counter Strike</option>
+                                                <option value="cod">Call of Duty</option>
+                                                <option value="bf">Battlefield</option>
                                                 <option value="fifa">FIFA 2004</option>
                                             </select>
                                         </div>
+
+                                        <div class="form-row form-multiple-choice-row">
+                                            <label>Wählen Sie die Slots</label>
+                                            <select data-placeholder="Wählen Sie die Slots" multiple="multiple">
+                                                <option value="2">2</option>
+                                                <option value="4">4</option>
+                                                <option value="6">6</option>
+                                                <option value="8">8</option>
+                                                <option value="2">10</option>
+                                                <option value="4">12</option>
+                                                <option value="6">14</option>
+                                                <option value="8">16</option>
+                                                <option value="2">18</option>
+                                                <option value="4">20</option>
+                                                <option value="6">22</option>
+                                                <option value="8">24</option>
+                                                <option value="2">26</option>
+                                                <option value="4">28</option>
+                                                <option value="6">30</option>
+                                                <option value="8">32</option>
+                                                <option value="2">64</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row form-text-row" id="price">
+                                        <label>Wählen Sie eine Preisspanne</label>
+                                        <input type="text" name="price" />
                                     </div>
                                 </form>
                             </div>
@@ -160,6 +183,7 @@
         <script src="vendor/jquery/jquery.js"></script>
         <script src="vendor/jquery/jquery-ui.js"></script>
         <script src="vendor/chosen/chosen.jquery.js"></script>
+        <script src="js/form-fields.js"></script>
         <script type="text/javascript">
             $("select").chosen();
         </script>

@@ -25,7 +25,7 @@
 .chzn-choices .search-field input                   { border:0; outline:none }
 
 .chzn-drop                                          { position:absolute; z-index:999 }
-.chzn-drop .chzn-results                            {}
+.chzn-drop .chzn-results                            { max-height:200px; overflow-y:auto }
 .chzn-drop .chzn-results li                         {}
 .chzn-drop .chzn-results .result-selected           {}
 .chzn-drop .chzn-results .active-result             {}
@@ -63,7 +63,6 @@
 }
 
 .chzn-drop {
-    margin-top:1px;
     background:#fff;
     box-shadow:0 1px 5px #ddd;
     min-width:280px !important;
@@ -125,6 +124,7 @@
 .chzn-container-single .chzn-single {
     display:block;
     position:relative;
+    outline:none;
 }
 
 .chzn-container-single .chzn-single span {
