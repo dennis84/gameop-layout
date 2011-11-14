@@ -57,7 +57,9 @@
 .chzn-choices .search-choice .search-choice-close {
     width:16px;
     height:16px;
-    background:#000;
+    margin-top:3px;
+    background:url(../img/chosen.png) no-repeat;
+    background-position:0 -200px;
     display:inline-block;
     float:right;
 }
@@ -65,19 +67,27 @@
 .chzn-drop {
     background:#fff;
     box-shadow:0 1px 5px #ddd;
+    min-width:280px !important;
 }
 
 .chzn-drop .chzn-results li {
     line-height:28px;
     padding:0 10px;
+    background:#fff url(../img/chosen.png) no-repeat;
+    background-position:right -145px;
 }
 
 .chzn-drop .chzn-results li:hover {
-    background:#eee;
+    background-color:#eee;
 }
 
 .chzn-drop .chzn-results .highlighted {
-    background:#eee;
+    background-color:#eee;
+}
+
+.chzn-drop .chzn-results .result-selected {
+    background:#fff url(../img/chosen.png) no-repeat;
+    background-position:right -95px;
 }
 
 /**
