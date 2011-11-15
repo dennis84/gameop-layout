@@ -23,6 +23,10 @@
 .icon.radio-checked                     { background-position:-16px 0 }
 .icon.checkbox                          { background-position:-32px 0 }
 .icon.checkbox-checked                  { background-position:-48px 0 }
+.icon.cross                             { background-position:0 -16px }
+.icon.toggle                            { background-position:-16px -16px }
 
 .flag                                   { background:url(../img/flags.png) no-repeat; position:absolute }
 .flag.new-small-top-right               { background-position: 0 0; width:25px; height:25px; top:-2px; right:-2px }
+
+.overlay                                { position:absolute; width:100%; height:100%; top:0; left:0; background:#fff; opacity:0 }

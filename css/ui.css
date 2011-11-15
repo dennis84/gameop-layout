@@ -94,6 +94,80 @@
 
 
 /* =============================================================================
+   Dropdown Button
+   ========================================================================== */
+
+.dropdown-button {
+    position:relative;
+    display:inline-block;
+    min-width:60px;
+}
+
+.dropdown-button .field {
+    line-height:28px;
+    border:1px solid #ddd;
+    text-shadow:0 1px 0 #fff;
+    background:#f3f3f3;
+    background:linear-gradient(top,#f5f5f5,#f1f1f1);
+    background:-webkit-linear-gradient(top,#f5f5f5,#f1f1f1);
+    border-radius:2px;
+}
+
+.dropdown-button .field .label {
+    padding:0 4px;
+    font-weight:bold;
+}
+
+.dropdown-button .field .icon {
+    float:right;
+    margin-top:5px;
+}
+
+.dropdown-button .drop {
+    z-index:999;
+    position:absolute;
+    background:#fff;
+    box-shadow:0 1px 5px #ddd;
+    min-width:240px;
+}
+
+.dropdown-button .drop .description {
+    line-height:28px;
+    margin:10px 0;
+    padding:0 10px;
+    color:#999;
+    font-weight:bold;
+}
+
+.dropdown-button .drop ul {
+}
+
+.dropdown-button .drop ul li {
+}
+
+.dropdown-button .drop ul li a {
+    display:block;
+    line-height:28px;
+    padding:0 10px;
+    color:#555;
+    font-weight:bold;
+}
+
+.dropdown-button .drop ul li a:hover {
+    background:#f2f2f2;
+}
+
+.dropdown-button .drop .dropdown-footer {
+    overflow:hidden;
+    padding:10px 10px;
+}
+
+.dropdown-button .drop .dropdown-footer .dropdown-footer-action {
+    float:right;
+}
+
+
+/* =============================================================================
    Main Menu
    ========================================================================== */
 
@@ -130,7 +204,6 @@
 
 .submenu {
     margin-top:10px;
-    overflow:hidden;
 }
 
 .submenu .actions {
