@@ -41,5 +41,11 @@ $(function () {
         self.on('click', '.field', function () {
             $(document).trigger('dropdown.toggle');
         });
+
+        // Closes the dropdown menu on
+        // the close button.
+        drop.on('click', '.close', function () {
+            $(document).trigger('dropdown.toggle');
+        });
     });
 });

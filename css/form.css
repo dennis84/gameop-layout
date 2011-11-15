@@ -19,6 +19,10 @@
 .form-row > select                                  {}
 .form-row > textarea                                { border:1px solid #d3d3d3; border-radius:2px }
 .form-row > div                                     {}
+.form-row .form-description                         { clear:both; font-weight:bold; color:#999; margin:0 }
+
+.form-action-row                                    { text-align:right }
+.form-action-row input[type="submit"]               { border:0 }
 
 
 /* =============================================================================
@@ -26,3 +30,7 @@
    ========================================================================== */
 
 .form-text-row                                      {}
+
+.form-range-row                                     {}
+.form-range-row > div                               { margin-top:20px }
+.form-range-row input                               { background:none; border:0; width:20px; outline:none; font-weight:bold }

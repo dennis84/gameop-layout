@@ -72,7 +72,7 @@
 
                                 <div class="dropdown-footer">
                                     <div class="dropdown-footer-action">
-                                        <a href="#" class="button light">Schließen</a>
+                                        <a href="#" class="close button light">Schließen</a>
                                     </div>
                                 </div>
                             </div>
@@ -156,14 +156,18 @@
                                         </div>
                                     </div>
 
-                                    <div class="form-row form-range-row">
+                                    <div class="form-row form-range-row" data-description="Der angegebene Preis ist in Euro bei monatlicher Rate">
                                         <label>Wählen Sie eine Preisspanne</label>
                                         <div>
-                                            <label>From</label>
+                                            <label>Von:</label>
                                             <input type="text" name="from" />
-                                            <label>To</label>
+                                            <label>Bis:</label>
                                             <input type="text" name="to" />
                                         </div>
+                                    </div>
+
+                                    <div class="form-action-row">
+                                        <input type="submit" value="Suchen" class="button blue" />
                                     </div>
                                 </form>
                             </div>

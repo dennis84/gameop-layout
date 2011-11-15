@@ -9,6 +9,10 @@
  */
 
 $(function () {
+    $('.form-row[data-description]').each(function () {
+        $(this).find('label').eq(0)
+            .after('<p class="form-description">'+ $(this).attr('data-description') +'</p>');
+    });
 
     /**
      * The range slider.
@@ -42,6 +46,8 @@ $(function () {
         // Hides the original form fields.
         // Ensure the posibility to fill the
         // fields if javascript is disabled.
-        row.find('div').eq(0).css('opacity', 0);
+        //row.find('div').eq(0).css('opacity', 0);
     });
+
+
 });

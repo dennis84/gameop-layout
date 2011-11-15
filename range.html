@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+ This file is part of the gameop package.
+
+ (c) Dennis Dietrich <d.dietrich84@googlemail.com/>
+
+ For the full copyright and license information, please view the LICENSE
+ file that was distributed with this source code.
+-->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Start</title>
+        <script src="vendor/jquery/jquery.js"></script>
+
+        <style>
+
+.wrapper {
+    width:400px;
+}
+
+.block {
+    background:#000;
+    height:200px;
+}
+
+.range {
+    table-layout:fixed;
+}
+
+.range td {
+    border:1px solid #ccc;
+}
+
+        </style>
+
+        <script>
+
+(function ($) {
+    function generateTable(nbCells) {
+        var html = '<table style="table-layout:fixed; width:100%"><tr>';
+        for (i = 0; i < nbCells + 1; i++) {
+            html += '<td>'+ i +'</td>';
+        }
+        html += '<tr></table>';
+
+        return html;
+    }
+
+    $.fn.range = function (options) {
+        $(this).each(function () {
+            var html = generateTable(options.cells);
+
+            table = $(html).appendTo($(this));
+        });
+    };
+})(jQuery);
+
+$(function () {
+    $('#range').range({cells: 10});
+})
+
+        </script>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <div class="block">
+                block
+            </div>
+
+            <div id="range"></div>
+        </div>
+    </body>
+</html>
