@@ -8,15 +8,23 @@
  * file that was distributed with this source code.
  */
 
+/* =============================================================================
+   Float Helper
+   ========================================================================== */
+
 .left                                   { float:left }
 .right                                  { float:right }
 .container                              { overflow:hidden }
-
 .clear                                  { clear:both }
 
 .hr                                     { height:1px; background:#b7b4a4; -moz-box-shadow:0 1px 0 #fff }
-
 .inverted                               {}
+.overlay                                { position:absolute; width:100%; height:100%; top:0; left:0; background:#fff; opacity:0 }
+
+
+/* =============================================================================
+   Icons
+   ========================================================================== */
 
 .icon                                   { background:url(../img/icons-16.png) no-repeat; width:16px; height:16px; display:inline-block; }
 .icon.radio                             { background-position:0 0 }
@@ -26,7 +34,81 @@
 .icon.cross                             { background-position:0 -16px }
 .icon.toggle                            { background-position:-16px -16px }
 
+
+/* =============================================================================
+   Flags
+   ========================================================================== */
+
 .flag                                   { background:url(../img/flags.png) no-repeat; position:absolute }
 .flag.new-small-top-right               { background-position: 0 0; width:25px; height:25px; top:-2px; right:-2px }
 
-.overlay                                { position:absolute; width:100%; height:100%; top:0; left:0; background:#fff; opacity:0 }
+
+/* =============================================================================
+   Show Rows
+   ========================================================================== */
+
+.show-row {
+    overflow:hidden;
+    min-height:24px;
+    margin-bottom:10px;
+}
+
+.show-row .label {
+    display:inline-block;
+    width:220px;
+    font-weight:bold;
+}
+
+.show-row .content {
+    display:inline-block;
+    width:220px;
+    float:right;
+    font-weight:bold;
+}
+
+.show-row .description {
+    display:inline-block;
+    width:220px;
+    float:right;
+    color:#999;
+    font-weight:bold;
+    font-style:italic;
+}
+
+
+/* =============================================================================
+   Edit Rows
+   ========================================================================== */
+
+.edit-row {
+    overflow:hidden;
+    min-height:24px;
+    margin-bottom:10px;
+    cursor:pointer;
+}
+
+.edit-row:hover {
+    background:#fff;
+    background:rgba(255,255,255,.8)
+}
+
+.edit-row .label {
+    display:inline-block;
+    width:220px;
+    font-weight:bold;
+}
+
+.edit-row .content {
+    display:inline-block;
+    width:220px;
+    float:right;
+}
+
+.edit-row .description {
+    display:inline-block;
+    width:220px;
+    float:right;
+    color:#999;
+    font-weight:bold;
+    font-style:italic;
+}

@@ -8,13 +8,23 @@
  * file that was distributed with this source code.
  */
 
+/* =============================================================================
+   Header
+   ========================================================================== */
+
 .header                                 {}
 .header-logo                            { height:100px }
+
+
+/* =============================================================================
+   Main
+   ========================================================================== */
 
 .main                                   { margin-top:60px }
 .main.two-columns                       { overflow:hidden }
 .main.two-columns .column-content       { width:700px; float:left }
 .main.two-columns .column-right         { width:220px; float:right }
+.main.two-columns .column-left          { width:220px; float:left; margin-right:20px }
 
 .main.three-columns                     {}
 .main.three-columns .column-content     { width:460px; float:left; margin-right:20px }

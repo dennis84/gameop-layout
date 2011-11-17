@@ -41,6 +41,9 @@
     padding-bottom:0;
 }
 
+.chzn-choices .search-field input {
+}
+
 .chzn-choices .search-choice {
     line-height:20px;
     padding:0 2px;
