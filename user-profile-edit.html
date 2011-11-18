@@ -136,11 +136,20 @@
             </div>
         </div>
 
-        <div id="facebox-standard-form">
-            <form>
-                form here!
-                <input type="submit" />
-            </form>
+        <div id="facebox-standard-form" style="display:none">
+            <div class="facebox-form">
+                <form>
+                    <div class="form-row form-text-row">
+                        <label for="title">Vorname</label>
+                        <input type="text" name="firstname">
+                    </div>
+    
+                    <div class="form-action-row">
+                        <a href="#" class="button light">Abbrechen</a>
+                        <input type="submit" value="Senden" class="button blue" />
+                    </div>
+                </form>
+            </div>
         </div>
 
         <script src="vendor/jquery/jquery.js"></script>
