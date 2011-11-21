@@ -1,0 +1,57 @@
+/*
+ * This file is part of the gameop package.
+ *
+ * (c) Dennis Dietrich <d.dietrich84@googlemail.com/>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+/* =============================================================================
+   Provider List
+   ========================================================================== */
+
+.provider-list {
+}
+
+.provider-list > ul {
+}
+
+.provider-list > ul > li {
+    margin-bottom:10px;
+    position:relative;
+    background:#fff;
+    height:64px;
+    box-shadow:0 1px 2px #ccc;
+    border-radius:2px;
+}
+
+.provider-list .image {
+    float:left;
+    width:60px;
+    height:60px;
+    padding:2px;
+}
+
+.provider-list .content {
+    padding:8px;
+    overflow:hidden;
+}
+
+.provider-list .name {
+    margin-top:5px;
+    font-size:18px;
+    font-family:"KlavikaLight";
+    color:#555;
+}
+
+.provider-list .rating-percentage-bar {
+    width:300px;
+    margin-top:15px;
+}
+
+.provider-list .button-bar {
+    position:absolute;
+    bottom:10px;
+    right:10px;
+}

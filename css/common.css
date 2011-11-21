@@ -38,6 +38,34 @@
 
 
 /* =============================================================================
+   Various
+   ========================================================================== */
+
+.hr {
+    height:1px;
+    background:#b7b4a4;
+    -moz-box-shadow:0 1px 0 #fff;
+}
+
+.inverted {
+}
+
+.overlay {
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background:#fff;
+    opacity:0;
+}
+
+#facebox .content {
+    width:540px !important;
+}
+
+
+/* =============================================================================
    Flags
    ========================================================================== */
 
@@ -127,28 +155,24 @@
 
 
 /* =============================================================================
-   Various
+   Rating Percentage Bar
    ========================================================================== */
 
-.hr {
-    height:1px;
-    background:#b7b4a4;
-    -moz-box-shadow:0 1px 0 #fff;
+.rating-percentage-bar {
+    position:relative;
+    background:#ccc;
+    box-shadow:inset 0 1px 2px #bbb;
+    height:6px;
+    border-radius:4px;
 }
 
-.inverted {
-}
-
-.overlay {
+.rating-percentage-range {
     position:absolute;
-    width:100%;
-    height:100%;
     top:0;
     left:0;
-    background:#fff;
-    opacity:0;
-}
-
-#facebox .content {
-    width:540px !important;
+    height:100%;
+    background:#4c8ffd;
+    background:-webkit-linear-gradient(top,#4c8ffd,#4787ed);
+    background:linear-gradient(top,#4c8ffd,#4787ed);
+    border-radius:4px;
 }
