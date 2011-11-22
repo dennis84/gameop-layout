@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--
+ This file is part of the gameop package.
+
+ (c) Dennis Dietrich <d.dietrich84@googlemail.com/>
+
+ For the full copyright and license information, please view the LICENSE
+ file that was distributed with this source code.
+-->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Reviews</title>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/font.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/common.css" />
+        <link rel="stylesheet" href="css/grid.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/varoious.css" />
+        <link rel="stylesheet" href="css/widgets.css" />
+        <link rel="stylesheet" href="css/partials.css" />
+        <link rel="stylesheet" href="css/ui.css" />
+        <link rel="stylesheet" href="css/jquery-ui.css" />
+        <link rel="stylesheet" href="css/form.css" />
+        <link rel="stylesheet" href="css/chosen.css" />
+
+        <link rel="stylesheet" href="vendor/facebox/facebox.css" />
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header>
+                <div class="header-logo">
+                    <img src="" alt="" />
+                </div>
+
+                <div class="menu-main">
+                    <ul>
+                        <li class="first"><a href="#">Home</a></li>
+                        <li class="cuttent"><a href="#">Vergleich</a></li>
+                        <li><a href="#">Bewertungen</a></li>
+                        <li><a href="#">Anbieter</a></li>
+                        <li class="last"><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="submenu">
+                    <div class="button-bar">
+                        <ul>
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">Provider Profile</a></li>
+                            <li><a href="#">Provider Reviews</a></li>
+                            <li><a href="#">Provider Offers</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="actions">
+                        <div class="dropdown-button">
+                            <div class="field">
+                                <span class="label">Me</span>
+                                <span class="icon toggle"></span>
+                            </div>
+
+                            <div class="drop" style="display:none">
+                                <div class="description">
+                                    Was wollen Sie hin?
+                                </div>
+
+                                <ul>
+                                    <li><a href="#">Benutzer Profil</a></li>
+                                    <li><a href="#">Anbieter Profil</a></li>
+                                </ul>
+
+                                <div class="dropdown-footer">
+                                    <div class="dropdown-footer-action">
+                                        <a href="#" class="close button light">Schließen</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#" class="button dark">Edit Profile</a>
+                    </div>
+                </div>
+            </header>
+
+            <div class="main three-columns" role="main">
+                <div class="column-left">
+                    <div class="user-profile-widget">
+                        <h2><br /></h2>
+                        hello
+                    </div>
+                </div>
+
+                <div class="column-content">
+                    <h2>Buchungsdaten eingeben</h2>
+                    <p class="">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                        Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+                        natoque penatibus et. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                        Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+                        natoque penatibus et.
+                    </p>
+                    <br />
+
+                    <div class="review-create booking-data-provider-step">
+                        <form action="#" method="post">
+                            <div class="form-row form-textarea-row">
+                                <label>Buchungs Daten</label>
+                                <textarea></textarea>
+                            </div>
+
+                            <div class="form-action-row">
+                                <input type="submit" value="Weiter" class="button blue" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="column-right">
+                    <div class="user-register-widget">
+                        <h2>Registrierung</h2>
+                        <div class="content">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                            Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+                            natoque penatibus et.
+                        </div>
+                        <br />
+
+                        <a href="#" class="button light">zur Anmeldung</a>
+                        <a href="#" class="button light">zur Anbieter Registrierung</a>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div id="GridLayout">
+            <div id="GridLayout-params">
+                { column_width:40, column_count:16, subcolumn_count:0, column_gutter:20, align:'center' }
+            </div>
+        </div>
+
+        <script src="vendor/jquery/jquery.js"></script>
+        <script src="vendor/jquery/jquery-ui.js"></script>
+        <script src="vendor/facebox/facebox.js"></script>
+        <script src="vendor/chosen/chosen.jquery.js"></script>
+        <script src="vendor/grid/gridlayout.js"></script>
+
+        <script src="js/ui.js"></script>
+        <script src="js/form-fields.js"></script>
+        <script src="js/facebox.js"></script>
+
+        <script type="text/javascript">
+            $("select").chosen();
+        </script>
+        <script src="vendor/grid/gridlayout.js"></script>
+    </body>
+</html>

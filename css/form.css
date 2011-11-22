@@ -75,6 +75,12 @@
 .form-range-row > div                               { margin-top:20px }
 .form-range-row input                               { background:none; border:0; width:20px; outline:none; font-weight:bold }
 
+.form-rating-row                                    {}
+.form-rating-row > div                              { background:url(../img/rating-create.png) no-repeat }
+.form-rating-row > div input                        { opacity:0; position:absolute }
+.form-rating-row > div label                        { width:32px; height:32px; display:inline-block; margin-right:12px; cursor:pointer; text-indent:-9999em }
+.form-rating-row > div label:last-of-type           { margin-right:0 }
+
 
 /* =============================================================================
    Facebox Form
