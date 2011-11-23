@@ -25,6 +25,7 @@
         <link rel="stylesheet" href="css/chosen.css" />
 
         <link rel="stylesheet" href="vendor/facebox/facebox.css" />
+        <link rel="stylesheet" href="vendor/bootstrap/bootstrap.css" />
     </head>
 
     <body>
@@ -36,7 +37,7 @@
 
                 <div class="menu-main">
                     <ul>
-                        <li class="first"><a href="#">Home</a></li>
+                        <li class="first"><a href="#" id="example" title="hello">Home</a></li>
                         <li class="cuttent"><a href="#">Vergleich</a></li>
                         <li><a href="#">Bewertungen</a></li>
                         <li><a href="#">Anbieter</a></li>
@@ -218,13 +219,20 @@
         <script src="vendor/facebox/facebox.js"></script>
         <script src="vendor/chosen/chosen.jquery.js"></script>
         <script src="vendor/grid/gridlayout.js"></script>
+        <script src="vendor/bootstrap/bootstrap-twipsy.js"></script>
+        <script src="vendor/bootstrap/bootstrap-popover.js"></script>
 
         <script src="js/ui.js"></script>
         <script src="js/form-fields.js"></script>
         <script src="js/facebox.js"></script>
 
         <script type="text/javascript">
-            $("select").chosen();
+            $(function() {
+                $("select").chosen();
+                $("a[title]").twipsy({
+                    animate: false
+                });
+            });
         </script>
     </body>
 </html>
