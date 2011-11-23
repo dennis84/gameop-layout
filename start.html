@@ -35,6 +35,33 @@
                     <img src="" alt="" />
                 </div>
 
+                <div class="header-user-security">
+                    <a href="#security-login" class="facebox">Signin</a>
+                    <div id="security-login" style="display:none">
+                        <form action="{{ path("fos_user_security_check") }}" method="post">
+                            <div class="">
+                                <label for="username">Benutzername</label>
+                                <input type="text" id="username" name="_username" value="" />
+                            </div>
+
+                            <div>
+                                <label for="password">Passwort</label>
+                                <input type="password" id="password" name="_password" />
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+                                <label for="remember_me">An mich erinnern</label>
+                            </div>
+
+                            <div class="popup-action">
+                                <a href="#" id="facebox-close-button" class="button secondary">Close</a>
+                                <input class="button primary" type="submit" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
                 <div class="menu-main">
                     <ul>
                         <li class="first"><a href="#" id="example" title="hello">Home</a></li>
