@@ -55,6 +55,11 @@
     border-radius:20px;
 }
 
+.chzn-choices .search-choice span {
+    font-size:11px;
+    font-weight:bold;
+}
+
 .chzn-choices .search-choice .search-choice-close {
     width:16px;
     height:16px;

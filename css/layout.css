@@ -12,9 +12,10 @@
    Header
    ========================================================================== */
 
-.header                                 {}
+header                                  { position:relative }
 .header-logo                            { height:100px }
 
+.header-user-security                   { position:absolute; top:0; right:0 }
 
 /* =============================================================================
    Main
