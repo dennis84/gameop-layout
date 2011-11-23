@@ -176,3 +176,27 @@
     background:linear-gradient(top,#4c8ffd,#4787ed);
     border-radius:4px;
 }
+
+
+/* =============================================================================
+   Default Table
+   ========================================================================== */
+
+.table-default {
+    width:100%;
+    background:#fff;
+    box-shadow:0 1px 1px #aaa;
+    border-radius:2px;
+}
+
+.table-default th {
+    color:#555;
+    font-weight:bold;
+    padding:10px;
+}
+
+.table-default td {
+    color:#666;
+    padding:10px;
+    border-top:1px solid #e3e3e3;
+}
