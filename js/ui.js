@@ -24,28 +24,28 @@ $(function () {
 
         // On toggle dropdown. The overlay events
         // gets started and must closed.
-        $(document).on('dropdown.toggle', function () {
+        var dropdownToggle = function () {
             if (drop.is(':visible')) {
                 $('#dropdown-overlay').hide().off('click');
                 drop.hide();
             } else {
                 $('#dropdown-overlay').show().on('click', function () {
-                    $(document).trigger('dropdown.toggle');
+                    dropdownToggle();
                 });
 
                 drop.show();
             }
-        });
+        };
 
         // On click the dropdown field
         self.on('click', '.field', function () {
-            $(document).trigger('dropdown.toggle');
+            dropdownToggle();
         });
 
         // Closes the dropdown menu on
         // the close button.
         drop.on('click', '.close', function () {
-            $(document).trigger('dropdown.toggle');
+            dropdownToggle();
         });
     });
 });

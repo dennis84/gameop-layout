@@ -27,3 +27,5 @@ ul li a                                 {}
 ul li ul                                {}
 ul li ul li                             {}
 ul li ul li a                           {}
+
+.image                                  { line-height:0 }
