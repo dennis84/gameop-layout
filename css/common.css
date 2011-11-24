@@ -82,6 +82,14 @@
     right:-2px;
 }
 
+.flag.new-small-top-left {
+    background-position: 0 -100px;
+    width:25px;
+    height:25px;
+    top:-2px;
+    left:-2px;
+}
+
 
 /* =============================================================================
    Show Rows
@@ -196,6 +204,7 @@
 }
 
 .table-default td {
+    position:relative;
     color:#666;
     padding:10px;
     border-top:1px solid #e3e3e3;
