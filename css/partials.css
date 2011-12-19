@@ -140,3 +140,46 @@
     border-top:1px solid #e3e3e3;
     padding:8px;
 }
+
+
+/* =============================================================================
+   Labels
+   ========================================================================== */
+
+.server-label-list {
+}
+
+.server-label-list ul {
+}
+
+.server-label-list ul li {
+    margin-bottom:5px;
+}
+
+.label-item {
+    position:relative;
+    line-height:28px;
+    border-radius:2px;
+}
+
+.label-item:hover {
+    background:#fff;
+    box-shadow:0 1px 1px #bbb;
+}
+
+.label-item .icon {
+    float:left;
+    margin:6px;
+}
+
+.label-item .title {
+}
+
+.label-item .color {
+    float:right;
+    margin:9px;
+    width:10px;
+    height:10px;
+    display:inline-block;
+    border-radius:2px;
+}

@@ -31,8 +31,8 @@
 
 .icon.radio                             { background-position:0 0 }
 .icon.radio-checked                     { background-position:-16px 0 }
-.icon.checkbox                          { background-position:-32px 0 }
-.icon.checkbox-checked                  { background-position:-48px 0 }
+.icon.checkbox-checked                  { background-position:-32px 0 }
+.icon.checkbox                          { background-position:-48px 0 }
 .icon.cross                             { background-position:0 -16px }
 .icon.toggle                            { background-position:-16px -16px }
 

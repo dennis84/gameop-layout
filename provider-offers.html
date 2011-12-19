@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!--
+ This file is part of the gameop package.
+
+ (c) Dennis Dietrich <d.dietrich84@googlemail.com/>
+
+ For the full copyright and license information, please view the LICENSE
+ file that was distributed with this source code.
+-->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Offers</title>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/font.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/common.css" />
+        <link rel="stylesheet" href="css/grid.css" />
+        <link rel="stylesheet" href="css/form.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/varoious.css" />
+        <link rel="stylesheet" href="css/widgets.css" />
+        <link rel="stylesheet" href="css/partials.css" />
+        <link rel="stylesheet" href="css/ui.css" />
+        <link rel="stylesheet" href="css/jquery-ui.css" />
+        <link rel="stylesheet" href="css/chosen.css" />
+
+        <link rel="stylesheet" href="vendor/facebox/facebox.css" />
+        <link rel="stylesheet" href="vendor/bootstrap/bootstrap.css" />
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header>
+                <div class="header-logo">
+                    <img src="" alt="" />
+                </div>
+
+                <div class="menu-main">
+                    <ul>
+                        <li class="first"><a href="#">Home</a></li>
+                        <li class="cuttent"><a href="#">Vergleich</a></li>
+                        <li><a href="#">Bewertungen</a></li>
+                        <li><a href="#">Anbieter</a></li>
+                        <li class="last"><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="submenu">
+                    <div class="button-bar">
+                        <ul>
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">Provider Profile</a></li>
+                            <li><a href="#">Provider Reviews</a></li>
+                            <li><a href="#">Provider Offers</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="actions">
+                        <div class="dropdown-button button light">
+                            <div class="field">
+                                <span class="label">Me</span>
+                                <span class="icon toggle"></span>
+                            </div>
+
+                            <div class="drop" style="display:none">
+                                <div class="description">
+                                    Was wollen Sie hin?
+                                </div>
+
+                                <ul>
+                                    <li><a href="#">Benutzer Profil</a></li>
+                                    <li><a href="#">Anbieter Profil</a></li>
+                                </ul>
+
+                                <div class="dropdown-footer">
+                                    <div class="dropdown-footer-action">
+                                        <a href="#" class="close button light">Schließen</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#" class="button dark">Edit Profile</a>
+                    </div>
+                </div>
+            </header>
+
+            <div class="main two-columns" role="main">
+                <div class="column-left">
+                    <div class="server-label-manager-widget">
+                        <h2>Manage Labels</h2>
+
+                        <div class="server-label-list">
+                            <ul>
+                                <li>
+                                    <div class="label-item">
+                                        <span class="icon checkbox">&nbsp;</span>
+                                        <span class="title">Hello</span>
+                                        <div class="color" style="background:#ff0000"></div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="label-item">
+                                        <span class="icon checkbox">&nbsp;</span>
+                                        <span class="title">World</span>
+                                        <div class="color" style="background:#ffcc99"></div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="label-item">
+                                        <span class="icon checkbox">&nbsp;</span>
+                                        <span class="title">Bla Blubb</span>
+                                        <div class="color" style="background:#66aadd"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column-content">
+                    <h2>Dennis84</h2>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div id="GridLayout">
+            <div id="GridLayout-params">
+                { column_width:40, column_count:16, subcolumn_count:0, column_gutter:20, align:'center' }
+            </div>
+        </div>
+
+        <script src="vendor/jquery/jquery.js"></script>
+        <script src="vendor/jquery/jquery-ui.js"></script>
+        <script src="vendor/facebox/facebox.js"></script>
+        <script src="vendor/chosen/chosen.jquery.js"></script>
+        <script src="vendor/grid/gridlayout.js"></script>
+        <script src="vendor/bootstrap/bootstrap-twipsy.js"></script>
+        <script src="vendor/bootstrap/bootstrap-popover.js"></script>
+
+        <script src="js/ui.js"></script>
+        <script src="js/form-fields.js"></script>
+        <script src="js/facebox.js"></script>
+
+        <script type="text/javascript">
+            $(function() {
+                $("select").chosen();
+                $("a[title]").twipsy({
+                    animate: false
+                });
+            });
+        </script>
+    </body>
+</html>
