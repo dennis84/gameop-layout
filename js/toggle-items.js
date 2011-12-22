@@ -1,3 +1,4 @@
+
 /*
  * This file is part of the gameop package.
  *
@@ -9,6 +10,12 @@
 
 $(function () {
     $('.label-item').on('click', function () {
+        $(this).toggleClass('selected');
+    });
+});
+
+$(function () {
+    $('.offer-item').on('click', function () {
         $(this).toggleClass('selected');
     });
 });

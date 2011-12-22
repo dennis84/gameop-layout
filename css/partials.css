@@ -157,40 +157,31 @@
 }
 
 .offer-item {
-    padding:4px;
-    height:60px;
+    padding:10px 0 4px 16px;
+    height:40px;
     position:relative;
     background:#fff;
     box-shadow:0 1px 1px #bbb;
 }
 
-.offer-item .title {
-    display:inline;
-}
-
-.offer-item .button-bar {
+.offer-item .icon {
     position:absolute;
-    bottom:2px;
-    right:4px;
+    top:18px;
+    left:0;
 }
 
-.offer-item .button-bar ul {
-    overflow:auto;
+.offer-item.selected {
+    background:#fff;
 }
 
-.offer-item .button-bar ul li {
-    width:auto;
-    margin:0;
+.offer-item.selected .icon {
+    background-position:-32px 0;
 }
 
-.offer-item .button-bar ul li a {
-    line-height:21px;
-    padding:0 1px;
-    font-size:11px;
+.offer-item .title {
 }
 
 .offer-label-list {
-    display:inline;
 }
 
 .offer-label-item {
