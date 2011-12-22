@@ -143,6 +143,66 @@
 
 
 /* =============================================================================
+   Offer List
+   ========================================================================== */
+
+.server-offer-list {
+}
+
+.server-offer-list ul {
+}
+
+.server-offer-list ul li {
+    margin-bottom:10px;
+}
+
+.offer-item {
+    padding:4px;
+    height:60px;
+    position:relative;
+    background:#fff;
+    box-shadow:0 1px 1px #bbb;
+}
+
+.offer-item .title {
+    display:inline;
+}
+
+.offer-item .button-bar {
+    position:absolute;
+    bottom:2px;
+    right:4px;
+}
+
+.offer-item .button-bar ul {
+    overflow:auto;
+}
+
+.offer-item .button-bar ul li {
+    width:auto;
+    margin:0;
+}
+
+.offer-item .button-bar ul li a {
+    line-height:21px;
+    padding:0 1px;
+    font-size:11px;
+}
+
+.offer-label-list {
+    display:inline;
+}
+
+.offer-label-item {
+    padding:2px 4px;
+    border-radius:2px;
+    font-weight:bold;
+    font-size:11px;
+    display:inline-block;
+}
+
+
+/* =============================================================================
    Labels
    ========================================================================== */
 
@@ -157,7 +217,7 @@
 }
 
 .label-item {
-    position:relative;
+    cursor:pointer;
     line-height:28px;
     border-radius:2px;
 }
@@ -182,4 +242,14 @@
     height:10px;
     display:inline-block;
     border-radius:2px;
+    box-shadow:inset 0 1px 2px rgba(0,0,0,.5);
+}
+
+.label-item.selected {
+    background:#fff;
+    box-shadow:0 1px 1px #bbb;
+}
+
+.label-item.selected .icon {
+    background-position:-32px 0;
 }
