@@ -257,3 +257,45 @@
 .label-item.selected .icon {
     background-position:-32px 0;
 }
+
+
+/* =============================================================================
+   Offer Table
+   ========================================================================== */
+
+.offer-list table tr td {
+    border-right:1px solid #e3e3e3;
+    border-bottom:1px solid #e3e3e3;
+    width:25%
+}
+
+.offer-list table tr td:nth-child(4) {
+    border-right:0;
+}
+
+.offer-list table tr:last-child td {
+    border-bottom:0;
+}
+
+.offer-table-item {
+}
+
+.offer-table-item .label {
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.offer-table-item .body {
+}
+
+.offer-table-item .image {
+    text-align:center;
+    padding:20px 0;
+}
+
+.offer-table-item .description .body {
+    font-size:11px;
+}
+
+.offer-table-item .pricing {
+}
